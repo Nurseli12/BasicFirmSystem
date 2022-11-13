@@ -16,6 +16,17 @@ namespace BasicFirmSystem.Persistence.Contexts
     {
         protected IConfiguration Configuration;
 
+        protected BaseDbContext(DbContextOptions dbContextoptions,IConfiguration configuration):base(dbContextoptions)
+        {
+            Configuration = configuration;
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            //if (!optionsBuilder.IsConfigured)
+            //    base.OnConfiguring(
+            //        optionsBuilder.UseSqlServer(Configuration.GetConnectionString("SomeConnectionString")));
+        }
         public DbSet<AlternativeCurrent> AlternativeCurrents { get; set; }
         public DbSet<AlternativeStock> AlternativeStocks { get; set; }
         public DbSet<Appellation> Appellations { get; set; }
