@@ -1,4 +1,5 @@
-﻿using BasicFirmSystem.Persistence.Paging;
+﻿using BasicFirmSystem.Domain.Entities;
+using BasicFirmSystem.Persistence.Paging;
 using Microsoft.EntityFrameworkCore.Query;
 using System;
 using System.Collections.Generic;
