@@ -55,14 +55,18 @@ namespace BasicFirmSystem.Persistence.Repositories
             else { return false; }
         }
 
-        public Task<ICollection<TEntity>> FindAllAsync(Expression<Func<TEntity, bool>> match)
+        public async Task<ICollection<TEntity>> FindAllAsync(Expression<Func<TEntity, bool>> match)
         {
-            throw new NotImplementedException();
+            var query = Context.Set<TEntity>().AsNoTracking();
+            return match != null ? await query.Where(match).ToListAsync()
+                : await query.ToListAsync();
+
         }
 
-        public Task<TEntity> FindOneAsync(Expression<Func<TEntity, bool>> match)
+        public async Task<TEntity> FindOneAsync(Expression<Func<TEntity, bool>> match)
         {
-            throw new NotImplementedException();
+            var query = Context.Set<TEntity>().AsNoTracking();
+            return await query?.FirstOrDefaultAsync(match);
         }
 
         public Task<TEntity?> GetAsync(Expression<Func<TEntity, bool>> predicate)
