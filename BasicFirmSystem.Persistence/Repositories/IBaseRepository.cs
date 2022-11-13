@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BasicFirmSystem.Persistence.Repositories
 {
-    public interface IBaseRepository<T> : IQuery<T> where T: Entity, new()
+    public interface IBaseRepository<T> : IQuery<T> where T: Entity
     {
         Task<T?> GetAsync(Expression<Func<T, bool>> predicate);
 
@@ -27,5 +27,23 @@ namespace BasicFirmSystem.Persistence.Repositories
         Task<T> AddAsync(T entity);
         Task<T> UpdateAsync(T entity);
         Task<T> DeleteAsync(T entity);
+
+
+        ////////////////
+        ///
+        Task<IEnumerable<T>> GetListAsync(Expression<Func<T, bool>> filter = null);
+        Task<int> CountAsync();
+        Task<int> CountAsync(Expression<Func<T, bool>> match); //Bu saçma
+        Task<TResult> MaxAsync<TResult>(Expression<Func<T, TResult>> selector, Expression<Func<T, bool>> predicate = null);
+        Task<double?> SumAsync(Expression<Func<T, double?>> selector, Expression<Func<T, bool>> predicate = null);
+        Task<T> FindOneAsync(Expression<Func<T, bool>> match);
+        Task<ICollection<T>> FindAllAsync(Expression<Func<T, bool>> match);
+        Task<ICollection<TEntity>> SelectAllAsync<TEntity>(Expression<Func<T, bool>> match, Expression<Func<T, TEntity>> selector) where TEntity : class;
+        Task<TEntity> SelectOneAsync<TEntity>(Expression<Func<T, bool>> match, Expression<Func<T, TEntity>> selector) where TEntity : class;
+        IQueryable<T> ToIQueryable();
+        Task<T> GetAsync(int id);
+        Task<T> UpdateAsync(T t, object key);
+        ICollection<TEntity> SelectAll<TEntity>(Expression<Func<T, bool>> match, Expression<Func<T, TEntity>> selector) where TEntity : class;
+        Task<bool> DeleteByIDAsync(int id);
     }
 }
