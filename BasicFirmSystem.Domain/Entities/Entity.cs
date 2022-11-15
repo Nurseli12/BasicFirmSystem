@@ -8,7 +8,7 @@ namespace BasicFirmSystem.Domain.Entities
 {
     public class Entity
     {
-        public int Id { get; set; }
+        public int ID { get; set; }
         public DateTime CreationDate { get; set; } = DateTime.Now;
         public DateTime UpdateDate { get; set; }
         public bool Status { get; set; } = false;
@@ -19,7 +19,7 @@ namespace BasicFirmSystem.Domain.Entities
         }
         public Entity(int id, DateTime creationDate, bool status, string explanation, DateTime updateDate) : this()
         {
-            Id = id;
+            ID = id;
             CreationDate = creationDate;
             Status = status;
             Explanation = explanation;

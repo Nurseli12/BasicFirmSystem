@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BasicFirmSystem.Application.Services.Repositories
 {
-    public interface ICurrentCardRepository :IBaseRepository<CurrentCard>
+    public interface IStockCardRepository:IBaseRepository<StockCard>
     {
     }
 }
