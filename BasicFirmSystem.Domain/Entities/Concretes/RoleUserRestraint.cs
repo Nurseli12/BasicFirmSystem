@@ -20,11 +20,12 @@ namespace BasicFirmSystem.Entities.Concretes
             DateTime creationDate,
             bool status,
             string explanation,
+            DateTime updateDate,
             int roleID,
             int stockCardID,
             int amount,
             int time
-            ) : base(id, creationDate, status,explanation)
+            ) : base(id, creationDate, status,explanation,updateDate)
         {
             RoleID = roleID;
             StockCardID = stockCardID;

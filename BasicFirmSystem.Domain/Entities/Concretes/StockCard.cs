@@ -18,6 +18,7 @@ namespace BasicFirmSystem.Entities.Concretes
             int id,
             DateTime creationDate,
             bool status,
+            DateTime updateDate,
             int stockMainGroupID,
             int stockMiddleGroupID,
             int stockSubGroupID,
@@ -35,7 +36,7 @@ namespace BasicFirmSystem.Entities.Concretes
             bool orderMail,
             int discount,
             int deadline
-            ) : base(id, creationDate, status,explanation)
+            ) : base(id, creationDate, status,explanation,updateDate)
         {
             StockMainGroupID = stockMainGroupID;
             StockMiddleGroupID = stockMiddleGroupID;    

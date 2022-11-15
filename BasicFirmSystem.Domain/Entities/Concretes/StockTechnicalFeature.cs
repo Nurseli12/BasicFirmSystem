@@ -19,11 +19,12 @@ namespace BasicFirmSystem.Entities.Concretes
             DateTime creationDate,
             bool status,
             string explanation,
+            DateTime updateDate,
             int stockCardID,
             string title,
             string detail,
             string imageURL
-            ) : base(id, creationDate, status, explanation)
+            ) : base(id, creationDate, status, explanation,updateDate)
         {
             StockCardID = stockCardID;
             Title = title;

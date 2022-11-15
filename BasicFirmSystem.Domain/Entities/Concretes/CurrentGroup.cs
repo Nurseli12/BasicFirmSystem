@@ -18,8 +18,9 @@ namespace BasicFirmSystem.Entities.Concretes
             DateTime creationDate,
             bool status,
             string explanation,
+            DateTime updateDate,
             string name
-            ) : base(id,creationDate,status,explanation)
+            ) : base(id,creationDate,status,explanation,updateDate)
         {
             Name = name;
              

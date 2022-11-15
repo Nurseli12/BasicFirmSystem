@@ -18,9 +18,10 @@ namespace BasicFirmSystem.Entities.Concretes
             DateTime creationDate,
             bool status,
             string explanation,
+            DateTime updateDate,
             int alternativeStockCardID,
             int stockCardID
-            ) : base(id,creationDate,status,explanation)
+            ) : base(id,creationDate,status,explanation,updateDate)
         {
             StockCardID = stockCardID;
             AlternativeStockCardID = alternativeStockCardID;

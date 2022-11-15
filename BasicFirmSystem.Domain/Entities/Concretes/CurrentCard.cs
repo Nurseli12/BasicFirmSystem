@@ -17,6 +17,7 @@ namespace BasicFirmSystem.Entities.Concretes
             int id,
             DateTime creationDate,
             bool status,
+            DateTime updateDate,
             int currentGroupID,
             int currentSubGroupID,
             int taxOfficeID,
@@ -29,7 +30,7 @@ namespace BasicFirmSystem.Entities.Concretes
             string phoneNumber,
             string gsmNumber,
             string deliveryAddress
-        ) : base(id,creationDate,status,explanation)
+        ) : base(id,creationDate,status,explanation,updateDate)
         {
             CurrentGroupID = currentGroupID;
             CurrentSubGroupID=currentSubGroupID;

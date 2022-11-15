@@ -18,9 +18,10 @@ namespace BasicFirmSystem.Entities.Concretes
             DateTime creationDate,
             bool status,
             string explanation,
+            DateTime updateDate,
             int stockMiddleGroupID,
             string stockSubName
-            ) : base(id, creationDate, status, explanation)
+            ) : base(id, creationDate, status, explanation,updateDate)
         {
             StockMiddleGroupID = stockMiddleGroupID;
             StockSubName = stockSubName;

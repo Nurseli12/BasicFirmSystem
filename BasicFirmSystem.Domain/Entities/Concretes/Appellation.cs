@@ -19,7 +19,8 @@ namespace BasicFirmSystem.Entities.Concretes
             bool status,
             string name,
             string explanation
-            ) : base(id,creationDate,status,explanation)
+            DateTime updateDate,
+            ) : base(id,creationDate,status,explanation,updateDate)
         {
             Name = name;
             Explanation = explanation;

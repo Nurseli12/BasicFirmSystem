@@ -20,8 +20,9 @@ namespace BasicFirmSystem.Entities.Concretes
             string explanation,
             string taxOfficeName,
             string taxOfficeAddress,
+            DateTime updateDate,
             string taxOfficeNumber
-            ) : base(id, creationDate, status, explanation)
+            ) : base(id, creationDate, status, explanation,updateDate)
         {
             TaxOfficeName = taxOfficeName;
             TaxOfficeAddress = taxOfficeAddress;

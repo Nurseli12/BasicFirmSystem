@@ -17,10 +17,11 @@ namespace BasicFirmSystem.Entities.Concretes
         public TechnicalImage(int id,
             DateTime creationDate,
             bool status,
+            DateTime updateDate,
             string explanation,
             int stockCardID,
             string imageURL
-            ) : base(id, creationDate, status, explanation)
+            ) : base(id, creationDate, status, explanation,updateDate)
         {
             StockCardID = stockCardID;
             ImageURL = imageURL;

@@ -10,18 +10,20 @@ namespace BasicFirmSystem.Domain.Entities
     {
         public int Id { get; set; }
         public DateTime CreationDate { get; set; } = DateTime.Now;
+        public DateTime UpdateDate { get; set; }
         public bool Status { get; set; } = false;
         public string Explanation { get; set; }
         public Entity()
         {
 
         }
-        public Entity(int id, DateTime creationDate, bool status, string explanation) : this()
+        public Entity(int id, DateTime creationDate, bool status, string explanation, DateTime updateDate) : this()
         {
             Id = id;
             CreationDate = creationDate;
             Status = status;
             Explanation = explanation;
+            UpdateDate=updateDate;
         }
     }
 }

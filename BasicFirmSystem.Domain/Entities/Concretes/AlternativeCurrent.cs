@@ -19,13 +19,14 @@ namespace BasicFirmSystem.Entities.Concretes
             DateTime creationDate,
             bool status,
             string explanation,
+            DateTime updateDate,
             int stockCardID,
             int currentCardID,
             int moneyUnitID,
             double purchasePrice,
             int deadline
 
-            ) : base(id,creationDate,status,explanation)
+            ) : base(id,creationDate,status,explanation,updateDate)
         {
             StockCardID = stockCardID;
             CurrentCardID = currentCardID;

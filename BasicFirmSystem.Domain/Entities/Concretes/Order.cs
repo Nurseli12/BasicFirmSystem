@@ -19,10 +19,11 @@ namespace BasicFirmSystem.Entities.Concretes
             DateTime creationDate,
             bool status,
             string explanation,
+            DateTime updateDate,
             int userID,
             string name,
             string code
-            ) : base(id,creationDate,status,explanation)
+            ) : base(id,creationDate,status,explanation,updateDate)
         {
         }
 
