@@ -6,9 +6,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BasicFirmSystem.Application.Services.Repositories
+namespace BasicFirmSystem.Persistence.Repositories
 {
     public interface ICurrentCardRepository :IBaseRepository<CurrentCard>
     {
+
     }
 }
