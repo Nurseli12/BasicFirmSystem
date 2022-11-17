@@ -19,8 +19,9 @@ namespace BasicFirmSystem.Persistence
         {
             services.AddDbContext<BaseDbContext>(options =>
                                                      options.UseSqlServer(
-                                                         configuration.GetConnectionString("TemplateProjectConnectionString")));
+                                                         configuration.GetConnectionString("ConnectionString")));
             services.AddScoped<ICurrentCardRepository, CurrentCardRepository>();
+            services.AddScoped<IStockCardRepository, StockCardRepository>();
             //services.AddSingleton<ICurrentCardRepository, CurrentCardRepository>();
 
             return services;
