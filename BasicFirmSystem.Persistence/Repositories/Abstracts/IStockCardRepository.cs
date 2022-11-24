@@ -1,5 +1,5 @@
 ﻿using BasicFirmSystem.Entities.Concretes;
-using BasicFirmSystem.Persistence.Repositories;
+using Core.Persistence.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;

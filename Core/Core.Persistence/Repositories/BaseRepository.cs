@@ -1,6 +1,6 @@
-﻿using BasicFirmSystem.Domain.Entities;
-using BasicFirmSystem.Persistence.Dynamic;
-using BasicFirmSystem.Persistence.Paging;
+﻿using Core.Domain.Entities;
+using Core.Persistence.Dynamic;
+using Core.Persistence.Paging;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
 using System;
@@ -11,7 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace BasicFirmSystem.Persistence.Repositories
+namespace Core.Persistence.Repositories
 {
     public class BaseRepository<TEntity, TContext> : IBaseRepository<TEntity>
         where TEntity : Entity
@@ -102,7 +102,7 @@ namespace BasicFirmSystem.Persistence.Repositories
             return await queryable.ToPaginateAsync(index, size, 0, cancellationToken);
         }
 
-        public async Task<IEnumerable<TEntity>> GetListAsync(Expression<Func<TEntity, bool>> filter = null)
+        public async Task<IEnumerable<TEntity>> GetList(Expression<Func<TEntity, bool>> filter = null)
         {
             return filter == null ? Context.Set<TEntity>().ToList()
                 : Context.Set<TEntity>().Where(filter);

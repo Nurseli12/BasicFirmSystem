@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BasicFirmSystem.Persistence.Paging
+namespace Core.Persistence.Paging
 {
     public static class IQueryablePaginateExtensions
     {

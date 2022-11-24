@@ -1,4 +1,5 @@
-﻿using BasicFirmSystem.Domain.Entities;
+﻿
+using Core.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,13 +20,13 @@ namespace BasicFirmSystem.Entities.Concretes
             bool status,
             string explanation,
             DateTime updateDate,
-            string name
+            string currentGroupName
             ) : base(id,creationDate,status,explanation,updateDate)
         {
-            Name = name;
+            CurrentGroupName = currentGroupName;
              
         }
 
-        public string Name { get; set; }
+        public string CurrentGroupName { get; set; }
     }
 }

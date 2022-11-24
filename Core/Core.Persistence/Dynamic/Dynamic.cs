@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BasicFirmSystem.Persistence.Dynamic
+namespace Core.Persistence.Dynamic
 {
     public class Dynamic
     {

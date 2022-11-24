@@ -7,8 +7,21 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Features\" />
+    <Folder Include="CQRS\CurrentCards\Commands\UpdateCurrentCard\" />
+    <Folder Include="CQRS\CurrentCards\Models\" />
+    <Folder Include="CQRS\CurrentCards\Queries\" />
+    <Folder Include="CQRS\StockCards\Commands\CreateStockCard\" />
+    <Folder Include="CQRS\StockCards\Dtos\" />
+    <Folder Include="CQRS\StockCards\Models\" />
+    <Folder Include="CQRS\StockCards\Rules\" />
+    <Folder Include="CQRS\StockCards\Queries\" />
+    <Folder Include="CQRS\StockCards\Profiles\" />
     <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.0" />
+    <PackageReference Include="MediatR" Version="11.1.0" />
   </ItemGroup>
 
   <ItemGroup>

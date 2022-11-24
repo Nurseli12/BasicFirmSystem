@@ -1,5 +1,5 @@
-﻿using BasicFirmSystem.Domain.Entities;
-using BasicFirmSystem.Persistence.Paging;
+﻿using Core.Domain.Entities;
+using Core.Persistence.Paging;
 using Microsoft.EntityFrameworkCore.Query;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BasicFirmSystem.Persistence.Repositories
+namespace Core.Persistence.Repositories
 {
     public interface IBaseRepository<T> : IQuery<T> where T: Entity
     {
@@ -32,7 +32,7 @@ namespace BasicFirmSystem.Persistence.Repositories
 
         ////////////////
         ///
-        Task<IEnumerable<T>> GetListAsync(Expression<Func<T, bool>> filter = null);
+        Task<IEnumerable<T>> GetList(Expression<Func<T, bool>> filter = null);
         Task<int> CountAsync();
         Task<int> CountAsync(Expression<Func<T, bool>> match); //Bu saçma
         Task<TResult> MaxAsync<TResult>(Expression<Func<T, TResult>> selector, Expression<Func<T, bool>> predicate = null);
