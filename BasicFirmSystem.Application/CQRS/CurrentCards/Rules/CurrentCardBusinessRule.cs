@@ -1,6 +1,6 @@
 ﻿using BasicFirmSystem.Entities.Concretes;
-using BasicFirmSystem.Persistence.Paging;
 using BasicFirmSystem.Persistence.Repositories;
+using Core.Persistence.Paging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +23,7 @@ namespace BasicFirmSystem.Application.CQRS.CurrentCards.Rules
             if (result.Items.Any())
                 throw new Exception("Cari Kart Zaten Var");
         }
+       
     }
 }
 

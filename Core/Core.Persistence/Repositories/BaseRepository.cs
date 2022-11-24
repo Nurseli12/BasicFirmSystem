@@ -190,7 +190,7 @@ namespace Core.Persistence.Repositories
             return entity;
         }
 
-        public async Task<TEntity> UpdateAsync(TEntity t, object key)
+        public async Task<TEntity> UpdateAsyncWithID(TEntity t, object key)
         {
             if (t == null)
             {

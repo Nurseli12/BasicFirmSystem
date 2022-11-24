@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="CQRS\CurrentCards\Commands\UpdateCurrentCard\" />
     <Folder Include="CQRS\CurrentCards\Models\" />
     <Folder Include="CQRS\CurrentCards\Queries\" />
     <Folder Include="CQRS\StockCards\Commands\CreateStockCard\" />

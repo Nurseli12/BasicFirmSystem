@@ -43,7 +43,7 @@ namespace Core.Persistence.Repositories
         Task<TEntity> SelectOneAsync<TEntity>(Expression<Func<T, bool>> match, Expression<Func<T, TEntity>> selector) where TEntity : class;
         IQueryable<T> ToIQueryable();
         Task<T> GetAsync(int id);
-        Task<T> UpdateAsync(T t, object key);
+        Task<T> UpdateAsyncWithID(T t, object key);
         ICollection<TEntity> SelectAll<TEntity>(Expression<Func<T, bool>> match, Expression<Func<T, TEntity>> selector) where TEntity : class;
         Task<bool> DeleteByIDAsync(int id);
     }
